@@ -24,7 +24,9 @@ int main()
 			<< "7.Mostrar elementos de la pila." << endl
 			<< "8.Retirar ultimo elemento de la pila." << endl
 			<< "9.Mostrar el ultimo elemento de la pila." << endl
-			<< "10.Salir." << endl
+			<< "10.Retirar ultimo elemento de la pila y insertarlo en la cola." << endl
+			<< "11.Retirar ultimo elemento de la cola y insertarlo en la pila." << endl
+			<< "12.Salir." << endl
 			<< endl << "=============================" << endl;
 
 		std::cin >> menu;
@@ -72,7 +74,15 @@ int main()
 		case 9:
 			cout << endl << "El elemento al tope de la pila es: " << pila->topePila() << endl;
 			break;
-		case 10:
+		case 10://Introducir ultimo elemento de la pila dentro de la cola.
+			cola->insertarElem(pila->RetirarElemTope());
+			cout << endl << "El elemento al tope de la pila, se ha movido a la cola." << endl;
+			break;
+		case 11://Introducir dentro de la pila el ultimo elemento de la cola.
+			pila->insertarElem(cola->atender());
+			cout << endl << "El elemento al tope de la cola, se ha movido a la pila." << endl;
+			break;
+		case 12://Salir.
 			breaker = 1;
 			break;
 			

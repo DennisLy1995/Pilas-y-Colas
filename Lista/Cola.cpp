@@ -81,8 +81,20 @@ void Cola::insertarElem(int x)
 	sumarLongitud();
 }
 
-void Cola::atender()
+int Cola::atender()
 {
+	int valor = 0;
+	if (getCabeza() != NULL) {
+		Nodo * aux;
+		aux = getCabeza();
+		valor = aux->getValor();
+		setCabeza(getCabeza()->getSig());
+		restarLongitud();
+	}
+	else {
+		cout << "No hay datos registrados dentro de la Cola." << endl;
+	}
+	return valor;
 }
 
 void Cola::eliminarElem(int x)
@@ -110,6 +122,7 @@ void Cola::eliminarElem(int x)
 					anterior->setSig(actual->getSig());
 				}
 				breaker = 1;
+				restarLongitud();
 			}
 			anterior = actual;
 			actual = actual->getSig();

@@ -1,7 +1,2 @@
-﻿  pch.cpp
-  Cola.cpp
-  Pila.cpp
-  Main.cpp
-  Nodo.cpp
-  Generating Code...
-  Lista.vcxproj -> C:\Users\Dennis Ly\Desktop\C++\Pila y Cola\Debug\Lista.exe
+﻿  Main.cpp
+  Lista.vcxproj -> C:\Users\Dennis Ly\Desktop\C++\Pilas y Colas\Debug\Lista.exe

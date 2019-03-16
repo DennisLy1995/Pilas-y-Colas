@@ -17,7 +17,7 @@ public:
 
 	bool esVaciaCola(Cola);
 	void insertarElem(int);
-	void atender();
+	int atender();
 	void eliminarElem(int);
 	int ultimoElem();
 	int getLongitud();

@@ -28,6 +28,7 @@ void Pila::insertarElem(int x) {
 	aux->setSig(getCabeza());
 	setCabeza(aux);
 	cout << endl << "Elemento ingresado en la pila." << endl << endl;
+	sumarLongitud();
 }
 
 void Pila::mostrarPila() {
@@ -53,6 +54,7 @@ int Pila::RetirarElemTope() {
 		aux = getCabeza();
 		valor = aux->getValor();
 		setCabeza(getCabeza()->getSig());
+		restarLongitud();
 	}
 	else {
 		cout << "No hay datos registrados dentro de la Pila." << endl;
